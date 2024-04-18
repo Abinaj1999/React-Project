@@ -36,15 +36,16 @@
   "Products": [
     {
       "id": "1",
-      "Name": "Beds",
+      "idd": "1",
+      "Name": "",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101509SD00136/56101509SD00136_A2_500x500.jpg",
       "Description": "red color",
       "More": "Know more",
       "Price": 100
     },
     {
-      "id": 2,
-      "Name": "fa",
+      "id": "2",
+      "Name": "Beds",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00663/56101515SD00663_A2_500x500.jpg",
       "Description": "red color",
       "Price": 100
@@ -52,40 +53,34 @@
   ],
   "Beds": [
     {
-      "id": 1,
+      "id": "1",
       "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00667/56101515SD00667_01_803x602.jpg",
-      "Price": "₹27,590"
-      
+      "Price": "27,590",
+      "Quantity": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00629/56101515SD00629_01_803x602.jpg",
-      "Price": "₹35,190"
-      
+      "Price": "35,190",
+      "Quantity": 1
     },
     {
-      "id": 3,
+      "id": "3",
+      "idd": "3",
       "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00667/56101515SD00667_01_803x602.jpg",
-      "Price": "₹28,890"
-      
+      "Price": "28,890",
+      "Quantity": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "Name": "Cesar King Bed",
       "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00465/56101515SD00465_01_500x500.jpg",
-      "Price": "₹86,612"
-      
+      "Price": "86,612",
+      "Quantity": 1
     }
   ],
-  "Product":[
-    {
-      "id": 4,
-      "Name": "Cesar King Bed",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00465/56101515SD00465_01_500x500.jpg",
-      "Price": "₹86,612"
-    }
-  ]
+  "carts": []
 }

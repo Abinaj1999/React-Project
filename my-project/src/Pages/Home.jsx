@@ -1,22 +1,23 @@
 import React from 'react';
 import Header from '../HomePage/Header';
-import NavBar from '../HomePage/NavBar';
 import Collections from '../HomePage/Collections';
+import Produc from '../HomePage/Shop/Produc';
+
 import Shop from '../HomePage/Shop/Shop';
+import NavBar from '../HomePage/NavigationBar/NavBar';
+
 
 function Home() {
   return (
   <>
-  <div>
-     <NavBar/>
-  </div>
-
+  
   <div>
      <Header/>
   </div>
 
+
   <div>
-     <Shop/>
+     <Produc/>
   </div>
   
   </>

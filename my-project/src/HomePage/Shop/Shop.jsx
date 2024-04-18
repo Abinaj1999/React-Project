@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Shop() {
     const [data, setData] = useState([]);
@@ -11,6 +12,10 @@ function Shop() {
     }, []);
 
     return (
+        <>
+        <div>
+        <h1 style={{fontSize:"40px",textAlign:"center", fontWeight:"bolder", marginTop:"30px"}} >SHOP BY COLLECTIONS</h1>
+    </div>
         <div className="flex flex-wrap justify-center">
             {data.map((d, i) => (
                 <div key={i} className="m-4">
@@ -23,13 +28,15 @@ function Shop() {
                             <p>{d.Description}</p>
                             <p>{d.Price}</p>
                             <div className="card-actions">
-                                <button className="btn btn-primary">MORE</button>
-                            </div>
+                                <button className="btn btn-primary"><Link to="/product">MORE</Link></button>
+    </div>
+
                         </div>
                     </div>
                 </div>
             ))}
         </div>
+        </>
     );
 }
 
