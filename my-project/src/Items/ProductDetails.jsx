@@ -1,96 +1,106 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import NavBar from '../HomePage/NavigationBar/NavBar';
+import Footer from '../FooterComponent/Footer';
 
 function ProductDetails() {
     const [product, setProduct] = useState(null);
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
+    const userId = localStorage.getItem("id");
+    const [cartData, setCartData] = useState([]);
 
     useEffect(() => {
-        const storedLoggedIn = localStorage.getItem('loggedIn');
-        if (storedLoggedIn === 'true') {
-            setLoggedIn(true);
-        }
-    }, []);
-
-    useEffect(() => {
-        axios.get(`http://localhost:3000/Beds/`)
+        axios.get(`http://localhost:3000/Beds/${id}`)
             .then((response) => {
-                const products = response.data.filter(item => item.id == id);
-                setProduct(products[0]);
+                setProduct(response.data);
             })
             .catch((error) => console.log(error));
-    }, [id]);
+
+        axios.get(`http://localhost:3000/carts`)
+            .then((response) => {
+                const userCart = response.data.filter(item => item.userid === userId);
+                setCartData(userCart);
+            })
+            .catch((error) => console.log(error));
+    }, [id, userId]);
 
     const decreaseQuantity = () => {
-        if (product.Quantity > 1) {
-            setProduct({ ...product, Quantity: product.Quantity - 1 });
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
         }
     };
 
     const increaseQuantity = () => {
-        setProduct({ ...product, Quantity: product.Quantity + 1 });
+        setQuantity(quantity + 1);
     };
 
-    const addToCart = (product) => {
-        if (loggedIn) {
-            axios.post('http://localhost:3000/carts', product)
-                .then((response) => {
-                    console.log('Product added to cart:', response.data);
-                    alert('Product added to cart successfully!');
-                })
-                .catch((error) => {
-                    console.error('Error adding product to cart:', error);
-                    alert('Error adding product to cart. Please try again later.');
-                });
-        } else {
-            alert('Please login to add items to cart.')
+    const addToCart = () => {
+        const isProductInCart = cartData.some(item => item.Name === product.Name);
+
+        if (isProductInCart) {
+            alert('This product is already in your cart.');
+            return;
         }
-    };
+
+        axios.post('http://localhost:3000/carts', { userid: userId, ...product, Quantity: quantity })
+            .then((response) => {
+                if (response && response.data) {
+                    alert('Product added to cart successfully!');
+                    window.location.reload();
+                } else {
+                    console.error('Error adding product to cart: Invalid response data', response.data);
+                    alert('Error adding product to cart. Invalid response data.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error adding product to cart:', error);
+                alert('Error adding product to cart. Please try again later.');
+            });
+    }
 
     return (
-        <div>
-            {product && (
-                <div>
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
-                        <figure><img src={product.image} alt="Album" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{product.Name}</h2>
-                            <p>{product.Description}</p>
-                            <p>{product.Price}</p>
-                            <div className="card-actions justify-end">
-                                <button
-                                    className="btn-quantity"
-                                    style={{ color: "red" }}
-                                    onClick={decreaseQuantity}
-                                >
-                                    -
-                                </button>
-                                <span className="quantity">{product.Quantity}</span>
-                                <button
-                                    className="btn-quantity"
-                                    onClick={increaseQuantity}
-                                >
-                                    +
-                                </button>
+        <>
+            <NavBar />
+            <div className="container mx-auto mt-8">
+                {product && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <img src={product.image} alt="Product" className="w-full h-auto" style={{width:350}}/>
+                        </div>
+                        <div>
+                            <h1 className="text-2xl font-bold mb-4">{product.Name}</h1>
+                            <p className="mb-4">{product.Description}</p>
+                            <p className="text-lg font-semibold mb-4">Price: ${product.Price}</p>
+                            <div className="flex items-center mb-4">
+                                <h2 className="mr-4">Quantity:</h2>
+                                <button className="btn-quantity" onClick={decreaseQuantity}>-</button>
+                                <span className="mx-4 text-xl font-semibold">{quantity}</span>
+                                <button className="btn-quantity" onClick={increaseQuantity}>+</button>
                             </div>
-                            <div className="card-actions justify-end">
-                                {loggedIn ? (
-                                    <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to cart</button>
+                            <div>
+                                {localStorage.getItem("id") ? (
+                                    <button className="btn btn-primary" onClick={addToCart}>Add to Cart</button>
                                 ) : (
-                                    <button className="btn btn-primary" >Login</button>
+                                    <button className="btn btn-primary"><Link to="/Login">Login</Link></button>
                                 )}
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )}
+            </div>
+            <Footer />
+        </>
     );
 }
 
 export default ProductDetails;
+
+
+
+
+
 
 
 

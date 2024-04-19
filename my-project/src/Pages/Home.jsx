@@ -1,25 +1,24 @@
 import React from 'react';
 import Header from '../HomePage/Header';
-import Collections from '../HomePage/Collections';
 import Produc from '../HomePage/Shop/Produc';
-
-import Shop from '../HomePage/Shop/Shop';
 import NavBar from '../HomePage/NavigationBar/NavBar';
+import Footer from "../FooterComponent/Footer"
+
+
 
 
 function Home() {
   return (
   <>
-  
+
+    <NavBar />
   <div>
      <Header/>
   </div>
-
-
   <div>
      <Produc/>
   </div>
-  
+  <Footer/>
   </>
   );
 }

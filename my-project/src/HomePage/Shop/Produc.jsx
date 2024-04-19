@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Footer from '../../FooterComponent/Footer';
 
 function Produc() {
     const [data, setData] = useState([]);
@@ -28,8 +29,7 @@ function Produc() {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{product.Name}</h2>
-                                <p>{product.Description}</p>
-                                <p>{product.Price}</p>
+                                <p>${product.Price}</p>
                                 <div className="card-actions">
                                     <button className="btn btn-primary">More</button>
                                 </div>
@@ -39,6 +39,7 @@ function Produc() {
                 </div>
             ))}
         </div>
+        
         </>
     );
 }

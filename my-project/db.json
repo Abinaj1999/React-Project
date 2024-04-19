@@ -1,85 +1,105 @@
 {
   "USERS": [
     {
-      "id": "a06f",
-      "FirstName": "agsg",
-      "LastName": "adfg",
+      "id": "d35e",
+      "FirstName": "Rahul",
+      "LastName": "dsfgds",
       "Email": "abin@gmail",
-      "PhoneNo": "134654",
-      "Password": "123456"
+      "PhoneNo": "1456",
+      "Password": "12345",
+      "isBlocked": false
     },
     {
-      "id": "8c2c",
-      "FirstName": "e5ywer",
-      "LastName": "qweyery",
-      "Email": "abin@gmail",
-      "PhoneNo": "346546425",
-      "Password": "1234"
-    },
-    {
-      "id": "2ffe",
-      "FirstName": "abin",
-      "LastName": "aj",
-      "Email": "abin@gmail",
-      "PhoneNo": "142353476",
-      "Password": "123456"
-    },
-    {
-      "id": "4a8a",
-      "FirstName": "FGBNH",
-      "LastName": "SFNT",
-      "Email": "abi@gmail",
-      "PhoneNo": "345",
-      "Password": "1234"
-    }
-  ],
-  "Products": [
-    {
-      "id": "1",
-      "idd": "1",
-      "Name": "",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101509SD00136/56101509SD00136_A2_500x500.jpg",
-      "Description": "red color",
-      "More": "Know more",
-      "Price": 100
-    },
-    {
-      "id": "2",
-      "Name": "Beds",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00663/56101515SD00663_A2_500x500.jpg",
-      "Description": "red color",
-      "Price": 100
+      "id": "242c",
+      "FirstName": "Admin",
+      "LastName": "Admin",
+      "Email": "admin@example.com",
+      "PhoneNo": "1234567",
+      "Password": "123456",
+      "isBlocked": false
     }
   ],
   "Beds": [
     {
       "id": "1",
-      "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00667/56101515SD00667_01_803x602.jpg",
-      "Price": "27,590",
+      "item": "SOFA",
+      "Name": "Fabric Manual 1 Seater sofa",
+      "image": "https://ii1.pepperfry.com/media/catalog/product/s/t/494x544/stockholm-fabric-manual-recliner-1-seater-in-grey-colour-stockholm-fabric-manual-recliner-1-seater-i-ps8zyi.jpg",
+      "Description": "Sofa with hand-carved legs in silver decapè finishing. Pillows included as per the photo.",
+      "Price": "70210",
       "Quantity": 1
     },
     {
       "id": "2",
-      "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00629/56101515SD00629_01_803x602.jpg",
-      "Price": "35,190",
+      "item": "SOFA",
+      "Name": "Valerano Leather 2 Seater sofa",
+      "image": "https://ii1.pepperfry.com/media/catalog/product/v/a/494x544/valerano-leather-2-seater-motorized-recliner-in-brown-finish-with-usb-port-valerano-leather-2-seater-gj5njn.jpg",
+      "Description": "Valerano Leather 2 Seater Motorized Recliner In Brown Finish With USB Port",
+      "Price": "93210",
       "Quantity": 1
     },
     {
       "id": "3",
+      "item": "SOFA",
       "idd": "3",
-      "Name": "Zanza Queen Size Solid Wood Bed with Box Storage",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00667/56101515SD00667_01_803x602.jpg",
-      "Price": "28,890",
+      "Name": " Manual 1 Seater Recliner sofa",
+      "image": "https://ii1.pepperfry.com/media/catalog/product/g/r/494x544/grace-fabric-manual-1-seater-recliner-in-grey-colour-grace-fabric-manual-1-seater-recliner-in-grey-c-qutmqe.jpg",
+      "Description": "Grace Fabric Manual 1 Seater Recliner in Grey Colour  ",
+      "Price": "19990",
       "Quantity": 1
     },
     {
       "id": "4",
-      "Name": "Cesar King Bed",
-      "image": "https://www.godrejinterio.com/imagestore/B2C/56101515SD00465/56101515SD00465_01_500x500.jpg",
-      "Price": "86,612",
-      "Quantity": 1
+      "item": "Chair",
+      "Name": "PHAR LAP BLUE LOUNGE CHAIR",
+      "image": "https://artemest.mo.cloudinary.net/voiiz563mm3lpc64wrev4ft46g4y?tx=q_auto,w_512",
+      "More": "Know More",
+      "Price": "2268"
+    },
+    {
+      "id": "5",
+      "item": "Chair",
+      "Name": "CHERRY WOOD CHAIR",
+      "image": "https://artemest.mo.cloudinary.net/3wrry7wepurfz84385h4qvexscuj?tx=q_auto,w_1080",
+      "Description": "The iconic Chiavari model, renowned and admired by designers from around the world, wonderfully crafted by the experienced carpenters of Fratelli Levaggi in cherry wood. The Campanino Classica chair is a comfortable yet sturdy design sure to last for many years.",
+      "More": "More",
+      "Price": "2,265"
+    },
+    {
+      "id": "6",
+      "item": "Chair",
+      "Name": "CHAIR WITH NATURAL FINISH",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/25438/product/SOVETV-04420170607-22822-f9ru87.jpg?tx=q_auto,w_1080",
+      "Description": "his elegant and modern chair is part of the Autumn collection, made of linear pieces that boast exquisite craftsmanship and fine materials. This chair has a structure in ash wood with a natural finish. Its gentle curves envelop the body in a comfortable hug, while the seat is cushioned and upholstered in a light grey leather cover. A perfect chair for a contemporary decor, this piece will add a note of sophistication to any dining or living room.",
+      "More": "More",
+      "Price": "2610"
+    },
+    {
+      "id": "7",
+      "item": "Table",
+      "Name": "ITACA COFFEE TABLE",
+      "image": "https://artemest.mo.cloudinary.net/yaewswt356zmjfh354s7fiqrq56b?tx=q_auto,w_1080",
+      "Description": "The geometries of the Itaca coffee table invite you to a journey without a destination, or rather where encounters, experiences and adventures are themselves the destination. The combination of the mirror steel surfaces and the colored glass inserts succeeds in blending styling with essentiality, elegance and contemporaneity for a piece able to suggest the pleasure to discover new things or just new forms of things already known.",
+      "More": "More",
+      "Price": "1930"
+    },
+    {
+      "id": "8",
+      "item": "Table",
+      "Name": "GOLDEN COFFEE TABLEE",
+      "image": "https://artemest.mo.cloudinary.net/m1tboyngc7x279836nhbnmu9u8fl?tx=q_auto,w_1080",
+      "Description": "A design of rare elegance that reveals its inspiration from water lilies - recurring elements in Monet's paintings - at first glance, this coffee table reinterprets organic shapes in a stunning modern version. The three bent steel legs painted in gold sustain a sinuous porcelain stoneware top with a shiny green marble effect. A smaller version is available in the Artemest catalog.",
+      "More": "More",
+      "Price": "1450"
+    },
+    {
+      "id": "9",
+      "item": "Table",
+      "Name": "OTTO BRONZE COFFEE TABLE",
+      "image": "https://artemest.mo.cloudinary.net/rn3h7ikqm23ci6s080b56oc3qptb?tx=q_auto,w_1080",
+      "Description": "Drawing inspiration from the concept of star fragments from distant galaxies, this coffee table will surely be a stately accent to interior decors. Exuding dynamism and cosmic allure, it is crafted of glass enhanced with a bronze finish and arranged in captivating configurations. Also available in a clear and gold design, please consult the Artemest catalog for additional options.",
+      "More": "More",
+      "Price": "2655"
     }
   ],
   "carts": []
