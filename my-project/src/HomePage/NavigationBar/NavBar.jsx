@@ -10,16 +10,18 @@ function NavBar() {
   const [cartData, setCartData] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [items, setItems] = useState([]);
 
-  const { setCategory, category } = useContext(userContext);
-  const { setSearch, search } = useContext(userContext);
+  const { setCategory} = useContext(userContext);
+  const { setSearch} = useContext(userContext);
 
   const Navigate = useNavigate();
-  const storedLoggedIn = localStorage.getItem("username");
+ 
   const userId = localStorage.getItem("id");
 
+
   useEffect(() => {
+
+    // to fetch  cart data user can get this cart item
     axios.get(`http://localhost:3000/carts`)
       .then((response) => {
         const userCart = response.data.filter(item => item.userid === userId);
@@ -28,11 +30,7 @@ function NavBar() {
       })
       .catch((error) => console.log(error));
 
-    axios.get(`http://localhost:3000/Beds`)
-      .then((response) => {
-        setItems(response.data);
-      })
-      .catch((error) => console.log(error));
+// Fetch user data- retrieve information about the logged-in user
 
     axios.get(`http://localhost:3000/USERS/${userId}`)
       .then((response) => {
@@ -53,20 +51,25 @@ function NavBar() {
         updatedCart.splice(index, 1);
         setCartData(updatedCart);
         setTotalPrice(calculateTotalPrice(updatedCart));
+        window.location.reload();
       })
       .catch((error) => console.log(error));
+     
   };
 
+  
   const handleLoggedOut = () => {
     localStorage.clear();
     window.location.reload();
   };
+
 
   const SearchOn = (e) => {
     if (e.key === "Enter") {
       Navigate("/Component2");
     }
   };
+
 
   return (
     <div className="navbar bg-base-100 flex flex-wrap justify-between items-center px-4 py-2 sm:px-6">
@@ -77,8 +80,8 @@ function NavBar() {
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-54">
             <li><Link to="/">HOME</Link></li>
-            <li><Link to="/about">ABOUT</Link></li>
-            <li><Link to="/">CATEGORY</Link>
+            <li><Link to="/about">ABOUT US</Link></li>
+            <li style={{marginLeft:12}}>CATEGORY
               <ol>
                <li><Link to="/Compo" onClick={() => setCategory('SOFA')}>SOFA</Link></li>
                <li><Link to="/Compo" onClick={() => setCategory('Chair')}>CHAIR</Link></li>
@@ -87,14 +90,20 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <div>
-          <button tabIndex={0} ><Link to="/" ><h1 style={{fontSize:30, color:"black", fontWeight:800}}>AFO FURNITURES </h1></Link></button>
-        </div>
+        <div className="flex items-center sm:mt-0">
+  <button tabIndex={0}>
+    <Link to="/">
+      <h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl" style={{ color: "black", fontWeight: 800 }}>
+        AFO FURNITURES
+      </h1>
+    </Link>
+  </button>
+</div>
       </div>
 
-      <div className="flex items-center mt-6 sm:mt-0">
+      <div className="flex items-center ">
         <div>
-          <input onChange={(e) => setSearch(e.target.value.toLowerCase())} onKeyDown={SearchOn} type="text" placeholder="Search" className="input input-bordered" />
+          <input onChange={(e) => setSearch(e.target.value)} onKeyDown={SearchOn} type="text" placeholder="Search" className="input input-bordered" />
         </div>
 
         <div className="dropdown dropdown-end ml-6 relative">
@@ -114,7 +123,7 @@ function NavBar() {
           <img src={product.image} alt="Product" className="w-16 h-16 object-cover rounded" />
           <div className="ml-3">
             <h4 className="text-sm font-semibold">{product.Name}</h4>
-            <p className="text-xs text-gray-600">Price: ${product.Price}</p>
+            <p className="text-xs text-gray-600">Price: ₹{product.Price}</p>
             <p className="text-xs text-gray-600">Quantity: {product.Quantity}</p>
           </div>
           <button className="text-xs text-red-500 font-semibold" onClick={() => handleRemoveProduct(product.id, index)}>Remove</button>
@@ -138,15 +147,10 @@ function NavBar() {
     </div>
   ) : (
     <div style={{marginLeft:110}}>
-      <button style={{ margin: '10px', border: '1px solid white', borderRadius: '25px', background: 'black', color: 'white', padding: '10px 20px', cursor: 'pointer' }}><Link to="/login" style={{ color: 'white', textDecoration: 'none' }}>Login</Link></button>
+      <button style={{ color: 'white', background: 'black', fontSize: '17px', borderRadius: '5px', padding: '5px 10px', border: '1px solid white', cursor: 'pointer' }} ><Link to="/login" style={{ color: 'white', textDecoration: 'none' }}>Login</Link></button>
     </div>
   )}
 </div>
-
-
-
-
-
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-// AdminDashboard.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import Admin from './Admin';
@@ -9,21 +8,23 @@ function ProductPost() {
         Name: "",
         Price: "",
         image: "",
-        Quantity: ""
+        Quantity: "1",
+        Description: ""
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3000/Beds', text)
             .then((response) => {
-                console.log("Product added successfully:", response.data);
+                alert("Product added successfully");
                 
                 setText({
                     item: "",
                     Name: "",
                     Price: "",
                     image: "",
-                    Quantity: ""
+                    Quantity: "1",
+                    Description: ""
                 });
             })
             .catch((error) => {
@@ -31,19 +32,11 @@ function ProductPost() {
             });
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setText((prevText) => ({
-            ...prevText,
-            [name]: value
-        }));
-    };
-
     return (
         <>
             <Admin/>
             <div className="admin-dashboard">
-                <h1 className="text-3xl font-bold mb-6"style={{textAlign:'center'}}>Product Posting</h1>
+                <h1 className="text-3xl font-bold mb-6"style={{textAlign:'center'}}>New Product Posting</h1>
                 <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
                     <div className="space-y-4">
                         <div>
@@ -53,7 +46,7 @@ function ProductPost() {
                                 placeholder='Item'
                                 name='item'
                                 value={text.item}
-                                onChange={handleChange}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
                                 className="input input-bordered w-full"
                                 required
                             />
@@ -66,7 +59,7 @@ function ProductPost() {
                                 placeholder='Name'
                                 name='Name'
                                 value={text.Name}
-                                onChange={handleChange}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
                                 className="input input-bordered w-full"
                                 required
                             />
@@ -79,7 +72,7 @@ function ProductPost() {
                                 placeholder='Price'
                                 name='Price'
                                 value={text.Price}
-                                onChange={handleChange}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
                                 className="input input-bordered w-full"
                                 required
                             />
@@ -92,7 +85,7 @@ function ProductPost() {
                                 placeholder='Image URL'
                                 name='image'
                                 value={text.image}
-                                onChange={handleChange}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
                                 className="input input-bordered w-full"
                                 required
                             />
@@ -105,8 +98,20 @@ function ProductPost() {
                                 placeholder='Quantity'
                                 name='Quantity'
                                 value={text.Quantity}
-                                onChange={handleChange}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
                                 className="input input-bordered w-full"
+                                required
+                            />
+                        </div>
+                        
+                        <div>
+                            <label className="block font-bold mb-1">Description</label>
+                            <textarea
+                                placeholder='Description'
+                                name='Description'
+                                value={text.Description}
+                                onChange={(e) => setText({ ...text, [e.target.name]: e.target.value })}
+                                className="input input-bordered w-full" 
                                 required
                             />
                         </div>
@@ -122,3 +127,4 @@ function ProductPost() {
 }
 
 export default ProductPost;
+

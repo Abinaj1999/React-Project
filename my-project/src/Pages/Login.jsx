@@ -26,14 +26,10 @@ function Login() {
           if (user.Email === formData.Email && !user.isBlocked) {
             isValid = true;
             if (user.Password === formData.Password) {
-              localStorage.setItem("username", user.FirstName);
+             
               localStorage.setItem("id", user.id);
-              
-              
-              if (user.Email === "admin@example.com" && user.Password === "123456") {
-                console.log("admin");
+              if (user.Email === "admin@1.com" && user.Password === "123456") {
                 navigate("/Admin");
-                return
               } else {
                 navigate("Home");
               }

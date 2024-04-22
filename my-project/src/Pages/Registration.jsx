@@ -112,7 +112,10 @@ function Registration() {
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Continue</button>
+              </div>
+              <div className="form-control mt-6">
+                <button type="submit" className="btn btn-secondary" onClick={()=>navigate("/")}>Home</button>
               </div>
             </form>
           </div>

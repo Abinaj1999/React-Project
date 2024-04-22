@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-
 function Admin() {
   return (
     <div>
@@ -23,15 +22,12 @@ function Admin() {
     <a className="btn btn-ghost text-xl">AFO Furnitures</a>
   </div>
   <div className="navbar-end">
-  <button className="btn btn-ghost btn-circle text-red-600 hover:bg-red-100 hover:text-red-800 transition duration-300" style={{width:100,fontSize:18,fontWeight:800}}>
-    <Link to={'/'}>Logout</Link>
+  <button className="btn btn-ghost btn-circle text-black-600 hover:bg-red-100 hover:text-red-800 transition duration-300" style={{width:100,fontSize:18,fontWeight:800}}>
+    <Link to={'/'}>LogOut</Link>
   </button>
 </div>
-
 </div>
-
     </div>
   )
 }
-
 export default Admin

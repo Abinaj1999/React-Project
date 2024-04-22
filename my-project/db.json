@@ -13,9 +13,36 @@
       "id": "242c",
       "FirstName": "Admin",
       "LastName": "Admin",
-      "Email": "admin@example.com",
+      "Email": "admin@1.com",
       "PhoneNo": "1234567",
       "Password": "123456",
+      "isBlocked": false
+    },
+    {
+      "id": "62b0",
+      "FirstName": "fhsrh",
+      "LastName": "srhtrsytr",
+      "Email": "ab@gm",
+      "PhoneNo": "1234",
+      "Password": "12345",
+      "isBlocked": false
+    },
+    {
+      "id": "3534",
+      "FirstName": "BIBIN",
+      "LastName": "KP",
+      "Email": "bibinkp@gmail.com",
+      "PhoneNo": "7356764416",
+      "Password": "12345",
+      "isBlocked": false
+    },
+    {
+      "id": "3eba",
+      "FirstName": "shuhaib",
+      "LastName": "s",
+      "Email": "a@b",
+      "PhoneNo": "813794",
+      "Password": "12345",
       "isBlocked": false
     }
   ],
@@ -54,7 +81,9 @@
       "Name": "PHAR LAP BLUE LOUNGE CHAIR",
       "image": "https://artemest.mo.cloudinary.net/voiiz563mm3lpc64wrev4ft46g4y?tx=q_auto,w_512",
       "More": "Know More",
-      "Price": "2268"
+      "Price": "2268",
+      "Quantity": 1,
+      "Description": "Phar Lap is the lounge chair designed to bring comfort and protection to collective spaces, thanks to a slender structure inspired by the 70s design. The shaped backrest extends upwards to allow a distinct posture and, at the same time, shield the seat from the surrounding environment. "
     },
     {
       "id": "5",
@@ -62,15 +91,17 @@
       "Name": "CHERRY WOOD CHAIR",
       "image": "https://artemest.mo.cloudinary.net/3wrry7wepurfz84385h4qvexscuj?tx=q_auto,w_1080",
       "Description": "The iconic Chiavari model, renowned and admired by designers from around the world, wonderfully crafted by the experienced carpenters of Fratelli Levaggi in cherry wood. The Campanino Classica chair is a comfortable yet sturdy design sure to last for many years.",
+      "Quantity": 1,
       "More": "More",
-      "Price": "2,265"
+      "Price": "2265"
     },
     {
       "id": "6",
       "item": "Chair",
       "Name": "CHAIR WITH NATURAL FINISH",
       "image": "https://artemest.mo.cloudinary.net/spree/images/25438/product/SOVETV-04420170607-22822-f9ru87.jpg?tx=q_auto,w_1080",
-      "Description": "his elegant and modern chair is part of the Autumn collection, made of linear pieces that boast exquisite craftsmanship and fine materials. This chair has a structure in ash wood with a natural finish. Its gentle curves envelop the body in a comfortable hug, while the seat is cushioned and upholstered in a light grey leather cover. A perfect chair for a contemporary decor, this piece will add a note of sophistication to any dining or living room.",
+      "Description": "his elegant and modern chair is part of the Autumn collection, made of linear pieces that boast exquisite craftsmanship and fine materials. This chair has a structure in ash wood with a natural finish. Its gentle curves envelop the body in a comfortable hug.Very confortable to use.",
+      "Quantity": 1,
       "More": "More",
       "Price": "2610"
     },
@@ -79,7 +110,8 @@
       "item": "Table",
       "Name": "ITACA COFFEE TABLE",
       "image": "https://artemest.mo.cloudinary.net/yaewswt356zmjfh354s7fiqrq56b?tx=q_auto,w_1080",
-      "Description": "The geometries of the Itaca coffee table invite you to a journey without a destination, or rather where encounters, experiences and adventures are themselves the destination. The combination of the mirror steel surfaces and the colored glass inserts succeeds in blending styling with essentiality, elegance and contemporaneity for a piece able to suggest the pleasure to discover new things or just new forms of things already known.",
+      "Description": "The geometries of the Itaca coffee table invite you to a journey without a destination, or rather where encounters, experiences and adventures are themselves the destination. The combination of the mirror steel surfaces and the colored glass inserts succeeds in blending styling with essentiality, elegance and contemporaneity for a piece able to suggest the pleasure to discover new things.",
+      "Quantity": 1,
       "More": "More",
       "Price": "1930"
     },
@@ -89,6 +121,7 @@
       "Name": "GOLDEN COFFEE TABLEE",
       "image": "https://artemest.mo.cloudinary.net/m1tboyngc7x279836nhbnmu9u8fl?tx=q_auto,w_1080",
       "Description": "A design of rare elegance that reveals its inspiration from water lilies - recurring elements in Monet's paintings - at first glance, this coffee table reinterprets organic shapes in a stunning modern version. The three bent steel legs painted in gold sustain a sinuous porcelain stoneware top with a shiny green marble effect. A smaller version is available in the Artemest catalog.",
+      "Quantity": 1,
       "More": "More",
       "Price": "1450"
     },
@@ -98,9 +131,113 @@
       "Name": "OTTO BRONZE COFFEE TABLE",
       "image": "https://artemest.mo.cloudinary.net/rn3h7ikqm23ci6s080b56oc3qptb?tx=q_auto,w_1080",
       "Description": "Drawing inspiration from the concept of star fragments from distant galaxies, this coffee table will surely be a stately accent to interior decors. Exuding dynamism and cosmic allure, it is crafted of glass enhanced with a bronze finish and arranged in captivating configurations. Also available in a clear and gold design, please consult the Artemest catalog for additional options.",
+      "Quantity": 1,
       "More": "More",
       "Price": "2655"
+    },
+    {
+      "id": "10",
+      "item": "Chair",
+      "Name": "KIN BLUE AND GRAY CHAIR",
+      "Price": "1335",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/58696/product/BALEBG-00520190228-27315-69z79c.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "This chair by Radice Orlandini is inspired by the Kintsugi, a Japanese pottery technique that exalts rather than hides the cracks of broken objects with contrasting metallic lacquer. Similarly, each part of this chair can be emphasized with different materials and colors to highlight its intriguing design. "
+    },
+    {
+      "id": "11",
+      "item": "Chair",
+      "Name": "JOYCE BLACK ARMCHAIR",
+      "Price": " 2610",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/82731/product/MOREVR-05320190813-7-odi8bg.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "The elegant and sleek design of this armchair will not go unnoticed in refined commercial or residential interiors. Its anatomical seat is crafted of leather with a quilted finish. The armchair's frame in black-finished ash has an angular silhouette with straightforward armrests and slightly inclined back legs. "
+    },
+    {
+      "id": "12",
+      "item": "Chair",
+      "Name": "EASE ARMCHAIR",
+      "Price": "2890",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/106286/product/AMURBA-07120200320-36-19sb2dw.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "his awesome collection unequivocally states the great attention Amura puts on every shape, material and artisan work. Ease is an armchair with a great personality, and an original and innovative design. Perfectly matches comfort and aesthetics, so to match any living with its discreet elegance."
+    },
+    {
+      "id": "13",
+      "item": "SOFA",
+      "Name": "ZENO ECOLOGICAL SOFA",
+      "Price": " 11310",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/103479/product/DTCOMB-04020200306-24-1gn2v5s.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "Contemporary and compact, this playful Zeno Beige Sofa by Brian Sironi adds style to any room. Featuring a mid-century classic design with a modern twist, the legs and entire framework are crafted in solid beech wood and the seat and back have practical inbuilt plush cushioning, upholstered in a cotton/linen blend."
+    },
+    {
+      "id": "14",
+      "item": "SOFA",
+      "Name": "NABUK LEATHER SOFA",
+      "Price": " 36075",
+      "image": "https://artemest.mo.cloudinary.net/ryjfrcgria4yzrds1f063t0c62vu?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "Timeless elegance and sophistication characterize this splendid sofa, marked by clean and simple lines of welcoming charm. Boasting a three-seat shape, it is entirely upholstered with beige nubuck leather. It includes two cushions. Please contact the Concierge for further details and customization options."
+    },
+    {
+      "id": "15",
+      "item": "SOFA",
+      "Name": "FLY SOFA",
+      "Price": "69880",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/104393/product/BRUNVR-00120200313-25-ef3cy0.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "Elegant and refined, this sofa is distinguished for its classic silhouette of sinuous lines. Resting on two small feet crafted of molded beechwood boasting a polished chocolate-brown finish, it is sustained by a solid wood frame. The elegant 3-seat cushions.Very useful,beautyful in a variaty of colors you can get."
+    },
+    {
+      "id": "16",
+      "item": "Table",
+      "Name": "ETOILE VANITY TABLE",
+      "Price": "21580",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/36312/product/CHIAMB-03720180321-1539-1cwbwdc.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "A complementing piece to the Etoile Chest of Drawers, this vanity table is a superb addition to a bedroom, where it will make a sophisticated statement. Completely handcrafted of maple wood, this piece features an imposing size and a stunning art deco-inspired silhouette. "
+    },
+    {
+      "id": "17",
+      "item": "Table",
+      "Name": "ALTHEA VANITY TABLE",
+      "Price": " 23140",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/165133/product/1618221804919-SRSSNY-_0010__0023_Althea_20V20210426-26-14scmd5.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "This splendid vanity table offers a clean, forthright design defined by refined subtle details. Equipped with two drawers, it rests on a metal base composed of thin and sleek legs and is enhanced with two magnificent mirrors of contrasting sizes, mounted on bronzed metal frames. "
+    },
+    {
+      "id": "18",
+      "item": "Table",
+      "Name": "ABACO WRITING DESK Table",
+      "Price": "9160",
+      "image": "https://artemest.mo.cloudinary.net/spree/images/74706/product/PACICO-12120190628-7-f9omt6.jpg?tx=q_auto,w_1080",
+      "Quantity": "1",
+      "Description": "Prized materials and clean aesthetic effortlessly merge in this exquisite writing desk by Fabio Rebosio. The structure is crafted of Canaletto walnut wood and enriched with a matte bronze-lacquered tempered glass top, while the shelf features a walnut wood veneer (also ash wood). \n\n"
     }
   ],
-  "carts": []
+  "carts": [
+    {
+      "id": "1",
+      "userid": "3eba",
+      "item": "SOFA",
+      "Name": "Fabric Manual 1 Seater sofa",
+      "image": "https://ii1.pepperfry.com/media/catalog/product/s/t/494x544/stockholm-fabric-manual-recliner-1-seater-in-grey-colour-stockholm-fabric-manual-recliner-1-seater-i-ps8zyi.jpg",
+      "Description": "Sofa with hand-carved legs in silver decapè finishing. Pillows included as per the photo.",
+      "Price": "70210",
+      "Quantity": 4
+    },
+    {
+      "id": "5",
+      "userid": "3eba",
+      "item": "Chair",
+      "Name": "CHERRY WOOD CHAIR",
+      "image": "https://artemest.mo.cloudinary.net/3wrry7wepurfz84385h4qvexscuj?tx=q_auto,w_1080",
+      "Description": "The iconic Chiavari model, renowned and admired by designers from around the world, wonderfully crafted by the experienced carpenters of Fratelli Levaggi in cherry wood. The Campanino Classica chair is a comfortable yet sturdy design sure to last for many years.",
+      "More": "More",
+      "Price": "2265",
+      "Quantity": 8
+    }
+  ]
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { userContext } from './Context';
 import { useContext } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import NavBar from '../HomePage/NavigationBar/NavBar';
 import Footer from '../FooterComponent/Footer';
 
@@ -11,6 +11,7 @@ import Footer from '../FooterComponent/Footer';
 function Compo() {
   const [filteredItems, setFilteredItems] = useState([]);
   const { category } = useContext(userContext);
+  const Navigate=useNavigate();
 
   useEffect(() => {
     axios
@@ -37,7 +38,7 @@ function Compo() {
                 <h2 className="card-title">{product.Name}</h2>
                 <p>${product.Price}</p>
                 <div className="card-actions">
-                  <button className="btn btn-primary"><Link to={`/product/${product.id}`}> More</Link></button>
+                  <button className="btn btn-primary" onClick={()=>{Navigate(`/product/${product.id}`)}}> More</button>
                 </div>
               </div>
             </div>
